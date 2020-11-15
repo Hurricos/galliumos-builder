@@ -1,4 +1,4 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/Hurricos/linux
-	branch = origin/v4.16.18-galliumos
+	branch = v4.16.18-galliumos
