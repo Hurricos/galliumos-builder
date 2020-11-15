@@ -1,2 +1,4 @@
 linux-*
 image
+*.bak
+*.bak.gz
