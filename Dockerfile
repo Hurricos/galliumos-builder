@@ -13,14 +13,16 @@ RUN git config --global user.email "you@example.com" && git config --global user
 
 ARG gtag
 
-RUN git clone --depth 1 https://github.com/GalliumOS/linux /devel/linux && git fetch origin tag ${gtag}
+ARG tag_no_branch
+
+RUN git clone --depth 1 https://github.com/Hurricos/linux /devel/linux && git fetch origin ${tag_no_branch} ${gtag}
 
 RUN git checkout ${gtag}
 
 # Patches that have not yet been committed to the remote
-ADD patches.tar /devel/linux/
+# ADD patches.tar /devel/linux/
 
-RUN git am *.patch
+# RUN git am *.patch
 
 RUN galliumos/bin/apply_patches
 
