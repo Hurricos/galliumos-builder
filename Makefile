@@ -1,4 +1,4 @@
-gtag := v5.9.8-galliumos
+gtag := v4.16.18-galliumos
 dtag := ubuntu:bionic-${gtag}-builder
 
 image: Dockerfile
