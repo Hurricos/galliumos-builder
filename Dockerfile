@@ -15,8 +15,9 @@ ARG gtag
 
 ARG tag_no_branch
 
-RUN git clone --depth 1 https://github.com/Hurricos/linux /devel/linux && git fetch origin ${tag_no_branch} ${gtag}
+#RUN git clone --depth 1 https://github.com/Hurricos/linux /devel/linux && git fetch origin ${tag_no_branch} ${gtag}
 
+COPY linux/ /devel/linux
 RUN git checkout ${gtag}
 
 # Patches that have not yet been committed to the remote
