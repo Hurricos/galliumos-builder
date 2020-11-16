@@ -1,5 +1,5 @@
-gtag := v4.16.18-galliumos
-tag_no_branch := tag # remove 'tag' if the remote is a WIP
+gtag := v5.9.8-galliumos
+tag_no_branch := # remove 'tag' if the remote is a WIP
 dtag := ubuntu:bionic-${gtag}-builder
 
 image: Dockerfile
