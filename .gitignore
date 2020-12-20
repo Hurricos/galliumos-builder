@@ -2,3 +2,4 @@ linux-*
 image
 *.bak
 *.bak.gz
+*.tar
