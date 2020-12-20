@@ -1,7 +1,5 @@
 FROM ubuntu:bionic
 
-WORKDIR /devel/linux
-
 RUN apt update && apt install -y git gcc make libncurses-dev m4 bison flex jfsutils \
     libcrypto++6 libcrypto++-dev libfl-dev libopagent1 \
     libjvmti-oprofile0 oprofile pcmciautils quota reiserfsprogs \
@@ -17,7 +15,10 @@ ARG tag_no_branch
 
 #RUN git clone --depth 1 https://github.com/Hurricos/linux /devel/linux && git fetch origin ${tag_no_branch} ${gtag}
 
+WORKDIR /devel/linux
+
 COPY linux/ /devel/linux
+
 RUN git checkout ${gtag}
 
 # Patches that have not yet been committed to the remote
